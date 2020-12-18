@@ -6,7 +6,7 @@ class Song < ActiveRecord::Base
   end
 
   def artist_name=(name)
-    self.artist.build(:name => name)
-    @song.save
+    self.create_artist(:name => name)
+
   end
 end
